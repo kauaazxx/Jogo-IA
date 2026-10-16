@@ -1,0 +1,114 @@
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#07130f" />
+    <meta name="description" content="Street Football 3D - um jogo de futebol arcade em 3D." />
+    <title>Street Football 3D</title>
+  </head>
+  <body>
+    <main id="game">
+      <div id="hud">
+        <div class="brand">
+          <span class="brand-icon">⚽</span>
+          <div>
+            <strong>STREET FOOTBALL</strong>
+            <small>3D ARCADE</small>
+          </div>
+        </div>
+
+        <div class="match-info">
+          <div class="team home-team">
+            <span class="team-dot"></span>
+            <span>STREET FC</span>
+          </div>
+
+          <div class="scoreboard">
+            <strong id="home-score">0</strong>
+            <span>:</span>
+            <strong id="away-score">0</strong>
+          </div>
+
+          <div class="team away-team">
+            <span>ROCKETS</span>
+            <span class="team-dot"></span>
+          </div>
+        </div>
+
+        <div class="timer-box">
+          <span class="live-dot"></span>
+          <span id="timer">01:30</span>
+        </div>
+      </div>
+
+      <div id="hint">WASD ou setas para mover · ESPAÇO para chutar · SHIFT para correr</div>
+
+      <div id="message" class="message hidden"></div>
+
+      <section id="start-screen" class="overlay">
+        <div class="menu-card">
+          <div class="menu-tag">3D FOOTBALL EXPERIENCE</div>
+          <h1>STREET<br /><span>FOOTBALL</span></h1>
+          <p>Entre em campo. Mostre seu talento.</p>
+
+          <div class="menu-stats">
+            <div><strong>1v1</strong><small>PARTIDA</small></div>
+            <div><strong>3D</strong><small>ARCADE</small></div>
+            <div><strong>90s</strong><small>DE JOGO</small></div>
+          </div>
+
+          <label for="difficulty">DIFICULDADE</label>
+          <select id="difficulty">
+            <option value="easy">Amador</option>
+            <option value="normal" selected>Profissional</option>
+            <option value="hard">Craque</option>
+          </select>
+
+          <button id="start-button" class="primary-button">JOGAR AGORA <span>→</span></button>
+          <small class="menu-footnote">CONTROLES PARA PC E CELULAR</small>
+        </div>
+      </section>
+
+      <section id="end-screen" class="overlay hidden">
+        <div class="menu-card result-card">
+          <div class="menu-tag">FIM DE PARTIDA</div>
+          <h2 id="result-title">FIM DE JOGO</h2>
+          <div class="final-score">
+            <span id="final-home">0</span>
+            <span>:</span>
+            <span id="final-away">0</span>
+          </div>
+          <p id="result-description">Boa partida!</p>
+          <button id="restart-button" class="primary-button">JOGAR NOVAMENTE <span>↻</span></button>
+        </div>
+      </section>
+
+      <div id="mobile-controls">
+        <div class="joystick-area">
+          <div id="joystick-base">
+            <div id="joystick-stick"></div>
+          </div>
+        </div>
+        <div class="action-buttons">
+          <button id="sprint-button" class="control-button sprint-button">⚡<small>CORRER</small></button>
+          <button id="kick-button" class="control-button kick-button">CHUTE<small>⚽</small></button>
+        </div>
+      </div>
+
+      <button id="pause-button" aria-label="Pausar jogo">Ⅱ</button>
+      <div id="pause-screen" class="overlay hidden">
+        <div class="menu-card">
+          <div class="menu-tag">PARTIDA PAUSADA</div>
+          <h2>PAUSA</h2>
+          <p>Respire. A partida está esperando.</p>
+          <button id="resume-button" class="primary-button">CONTINUAR <span>▶</span></button>
+          <button id="quit-button" class="secondary-button">VOLTAR AO MENU</button>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
